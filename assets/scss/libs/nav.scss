@@ -42,13 +42,17 @@ nav{
 
 }
 
-.nav-link > a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $white;
-    font-family: $font-poppins;
-    margin-left: 1em;
-    letter-spacing: 1px;
+.nav-link{
+    opacity: 0;
+
+    & > a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        font-family: $font-poppins;
+        margin-left: 1em;
+        letter-spacing: 1px;
+    }
 }
 
 .nav-active{

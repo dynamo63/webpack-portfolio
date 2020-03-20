@@ -50,6 +50,9 @@ nav {
   justify-content: space-evenly;
 }
 
+.nav-link {
+  opacity: 0;
+}
 .nav-link > a {
   text-transform: uppercase;
   text-decoration: none;
@@ -67,5 +70,15 @@ nav {
 @media screen and (max-width: 425px) {
   body {
     overflow-x: hidden;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
