@@ -10,6 +10,8 @@ nav {
   align-items: center;
   background-color: #EE1D1D;
   position: fixed;
+  top: 0;
+  z-index: 999;
   width: 100%;
 }
 
@@ -67,9 +69,57 @@ nav {
   opacity: 1;
 }
 
+.banner {
+  margin-top: 10vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Sen", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+}
+.banner h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+}
+.banner h2 {
+  font-family: "Oswald", cursive;
+  border-left: 1.5vw solid #EE1D1D;
+  box-sizing: border-box;
+  padding-left: 0.5em;
+}
+.banner h2 > span {
+  color: #EE1D1D;
+}
+
+.banner-arrow {
+  display: flex;
+  justify-content: center;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 9vw;
+  height: 6.5vh;
+  background-color: #EE1D1D;
+  text-decoration: none;
+}
+.banner-arrow i {
+  color: #ffffff;
+  z-index: -99;
+  animation: arrowAnimation 1.5s ease-in infinite;
+}
+
 @media screen and (max-width: 425px) {
   body {
     overflow-x: hidden;
+  }
+}
+@media (max-width: 321px) {
+  .banner-arrow {
+    width: 8vw;
+    height: 8.7vh;
   }
 }
 @keyframes fadeInLeft {
@@ -80,5 +130,13 @@ nav {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@keyframes arrowAnimation {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(120%);
   }
 }

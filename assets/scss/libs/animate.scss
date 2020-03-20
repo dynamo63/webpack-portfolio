@@ -9,3 +9,13 @@
         opacity: 1;
     }
 }
+
+@keyframes arrowAnimation{
+    
+    from{
+        transform: translateY(-5%);
+    }
+    to{
+        transform: translateY(120%);
+    }
+}

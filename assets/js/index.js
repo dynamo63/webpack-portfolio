@@ -4,6 +4,9 @@ const hamburgerBtn = document.querySelector('.nav-bars')
 const sidebarElt = document.querySelector('.nav-sidebar')
 const linkElts = document.querySelectorAll('.nav-link')
 
+hamburgerBtn.addEventListener('click',activeSidebar)
+
+
 /**
  * Active la sidebar et les animations de chaque lien
  */
@@ -13,7 +16,7 @@ function activeSidebar() {
 
     // Animate link
     linkElts.forEach((link,index) =>{
-        
+
         if (link.style.animation) {
             link.style.animation = ''
         } else {
@@ -22,4 +25,3 @@ function activeSidebar() {
     })
 }
 
-hamburgerBtn.addEventListener('click',activeSidebar)

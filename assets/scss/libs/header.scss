@@ -1,0 +1,44 @@
+.banner{
+    margin-top: $nav-height;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: $font-bold,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+
+    h1{
+        @include reset-space();
+        font-size: 1.5em;
+    }
+
+    h2{
+        font-family: $font-oswald;
+        border-left: 1.5vw solid $red;
+        box-sizing: border-box;
+        padding-left: .5em;
+    }
+
+    h2 > span{
+        color: $red;
+    }
+}
+
+
+.banner-arrow{
+    display: flex;
+    justify-content: center;
+    @include clip-path(polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%));
+    width: 9vw;
+    height: 6.5vh;
+    background-color: $red;
+    text-decoration: none;
+    
+    i{
+        color: $white;
+        z-index: -99;
+        animation: arrowAnimation 1.5s ease-in  infinite;
+    }
+}
