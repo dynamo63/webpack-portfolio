@@ -1,0 +1,11 @@
+@import 'libs/variables.scss';
+@import 'libs/mixins.scss';
+
+// Nos styles principaux
+
+body{
+    @include reset-space();
+}
+
+@import 'libs/nav.scss';
+@import 'libs/responsive_mobile.scss';

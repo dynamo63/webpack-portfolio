@@ -1,0 +1,57 @@
+nav{
+    display: flex;
+    height: $nav-height;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $red;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-logo > img{
+    width: 80px;
+    object-fit: cover;
+}
+
+.nav-bars{
+    width: 25px;
+    & .line{
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        margin-bottom: 3px;
+    }
+}
+
+
+.nav-sidebar{
+    position: absolute;
+    top: $nav-height;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 100vh - $nav-height;
+    @include reset-list();
+    background-color: $red;
+    @include transform(translateX(100%));
+    opacity: 0;
+    transition: transform .4s ease-out,opacity .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.nav-link > a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    font-family: $font-poppins;
+    margin-left: 1em;
+    letter-spacing: 1px;
+}
+
+.nav-active{
+    transform: translateX(0);
+    opacity: 1;
+}
