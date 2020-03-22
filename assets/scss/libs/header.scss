@@ -25,20 +25,3 @@
         color: $red;
     }
 }
-
-
-.banner-arrow{
-    display: flex;
-    justify-content: center;
-    @include clip-path(polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%));
-    width: 9vw;
-    height: 6.5vh;
-    background-color: $red;
-    text-decoration: none;
-    
-    i{
-        color: $white;
-        z-index: -99;
-        animation: arrowAnimation 1.5s ease-in  infinite;
-    }
-}
