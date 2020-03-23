@@ -1,61 +1,42 @@
-// Dynamisme de la sidebar
+import Sidebar from './utils/menu.js'
+import {SliderEvent} from './utils/animate.js'
 
-const hamburgerBtn = document.querySelector('.nav-bars')
-const sidebarElt = document.querySelector('.nav-sidebar')
-const linkElts = document.querySelectorAll('.nav-link')
+new Sidebar('.nav-bars','.nav-sidebar','.nav-link')
 
-hamburgerBtn.addEventListener('click',activeSidebar)
+const slider = new SliderEvent()
+const slideIndicationElt = document.querySelector('.slide-show__direction')
+const profil = document.querySelector('.profil-img')
 
 
-/**
- * Active la sidebar et les animations de chaque lien
- */
-function activeSidebar() {
-    // Toogle class 
-    sidebarElt.classList.toggle('nav-active')
+const observerIndicator = new IntersectionObserver((elements, observer) =>{
 
-    // Animate link
-    linkElts.forEach((link,index) =>{
+    if (elements[0].isIntersecting) {
+        slideIndicationElt.style.visibility = 'visible'
+        slideIndicationElt.querySelectorAll('i').forEach((arrow,index) =>{
+            arrow.style.animation = `fadeOut-${index + 1} .7s ease-in 2`
+        })
+        
+        setTimeout(function(){
+            slideIndicationElt.style.visibility = 'hidden'
+            observer.unobserve(profil)
+        },1000)
+    }
+    
+},{threshold:.9})
 
-        if (link.style.animation) {
-            link.style.animation = ''
-        } else {
-            link.style.animation = `fadeInLeft .5s forwards ease ${index/6}s`
+observerIndicator.observe(profil)
+
+
+
+const observerAnimation = new IntersectionObserver((elements, observer) =>{
+    elements.forEach(element =>{
+        if (element.isIntersecting) {
+            element.target.style.animation = `fadeInBottom .5s ease-in forwards`
+            observer.unobserve(element.target)
         }
     })
-}
+},{threshold:.2})
 
-const slideParentElt = document.querySelector('.slides')
-// const div = document.querySelector('#about-me > h1')
-const slideElt = document.querySelectorAll('.slide')
-let moving = false
-let init = 0
-let currentPosit = null
-
-slideParentElt.addEventListener('pointerdown', (e) =>{
-    init = e.pageX
-    moving = true
-})
-
-slideParentElt.addEventListener('pointermove',(e) =>{
-
-    if (moving) {
-        currentPosit = e.pageX
-    }
-})
-
-slideParentElt.addEventListener('pointerup', (e) =>{
-    const diff = currentPosit - init
-    if (diff < 0) {
-        slideElt.forEach(slideItem =>{
-            slideItem.style.transform = `translateX(-100vw)`
-        })
-    } else {
-        slideElt.forEach(slideItem =>{
-            slideItem.style.transform = `translateX(0)`
-        })
-    }
-    // console.table(data)
-    moving = false
-    console.log(diff)
+document.querySelectorAll('[data-animate="fadeInBottom"').forEach((element) =>{
+    observerAnimation.observe(element)
 })

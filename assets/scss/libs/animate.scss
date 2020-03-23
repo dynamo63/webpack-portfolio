@@ -1,3 +1,9 @@
+[data-animate="fadeInBottom"]{
+    transform: translateY(20%);
+    opacity: 0;
+}
+
+
 @keyframes fadeInLeft{
     from {
         transform: translateX(30%);
@@ -10,6 +16,18 @@
     }
 }
 
+@keyframes fadeInBottom{
+    from{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes arrowAnimation{
     
     from{
@@ -17,5 +35,41 @@
     }
     to{
         transform: translateY(120%);
+    }
+}
+
+@keyframes fadeOut-1{
+    0%,29%{
+        opacity:0.5;
+    }
+    33%,61%{
+        opacity: 0.5;
+    }
+    66%,100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut-2{
+    0%,29%{
+        opacity:0.5;
+    }
+    33%,61%{
+        opacity: 1;
+    }
+    66%,100%{
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadeOut-3{
+    0%,29%{
+        opacity:1;
+    }
+    33%,61%{
+        opacity: 0.5;
+    }
+    66%,100%{
+        opacity: 0.5;
     }
 }

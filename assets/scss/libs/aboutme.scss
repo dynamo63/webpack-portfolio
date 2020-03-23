@@ -1,5 +1,5 @@
 #about-me{
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #about-me > h1{
@@ -22,9 +22,31 @@
 }
 
 .profil-img{
-    object-fit: contain;
+    position: relative;
+
+    img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.slide-show__direction{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: linear-gradient(to bottom,#111010c7,#0a0a0ac9);
+    color: $white;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: visibility .5s;
+
 }
 
 .profil-content{

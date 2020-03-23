@@ -46,9 +46,14 @@
     <main>
         <section id="about-me">
             <h1>A Propos de moi</h1>
-            <div class="slides">
-                <div class="slide">
-                    <img class="profil-img" src="assets/img/mouckeytou-sabil.jpg" alt="MOUCKEYTOU MOULONGUI"/>
+            <div class="slides" data-animate="fadeInBottom">
+                <div class="profil-img slide">
+                    <img src="assets/img/mouckeytou-sabil.jpg" alt="MOUCKEYTOU MOULONGUI"/>
+                    <div class="slide-show__direction">
+                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                    </div>
                 </div>
                 <div class="profil-content slide">
                     <p>Je suis un développeur <mark>full Stack</mark> avec une forte appétence pour le <mark>backend .&nbsp; Autodidacte et passionné </mark>, j’ai appris à apprendre et je sais donc m’adapter rapidement à vos projets</p>
@@ -70,6 +75,6 @@
         </section>
     </main>
 
-    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/index.js" type="module" async></script>
 </body>
 </html>
