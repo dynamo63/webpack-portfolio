@@ -3,6 +3,12 @@ body {
   margin: 0;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Sen";
+  font-size: 2em;
+}
+
 nav {
   display: flex;
   height: 10vh;
@@ -99,12 +105,6 @@ nav {
   overflow: hidden;
 }
 
-#about-me > h1 {
-  text-align: center;
-  font-family: "Sen";
-  font-size: 2em;
-}
-
 .slides {
   display: inline-flex;
   justify-content: space-around;
@@ -168,6 +168,39 @@ nav {
   padding: 0.35em 0.6em;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
+}
+
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  width: 97%;
+  margin: 1em auto;
+}
+.course-item .line {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+.course-item .line > span {
+  background-color: #EE1D1D;
+  padding: 0.35em 1em;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.course-item .course-body {
+  width: 80%;
+}
+
+.course-heading h2 {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.course-heading small {
+  color: #686565;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 425px) {
