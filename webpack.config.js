@@ -18,7 +18,7 @@ const config = {
                 use:{
                     loader:'eslint-loader',
                     options:{
-                        fix:true
+                        fix:false
                     }
                 }
             },
@@ -72,9 +72,9 @@ const config = {
     }
 }
 
-// if (isDevMode) {
-//     config.devServer.open = true
-//     config.devServer.index = 'index.html'
-// }
+if (isDevMode) {
+    config.devServer.open = true
+    config.devServer.index = 'index.html'
+}
 
 module.exports = config
