@@ -1,3 +1,7 @@
 import './scss/style.scss'
+import { activeSidebar } from './app/utils'
 
-console.log('Hello wolrd !!')
+const btnMenu = document.querySelector('.nav-bars')
+btnMenu.addEventListener('click', () => {
+    activeSidebar('.nav-wrapper', '.nav-link')
+})

@@ -1,5 +1,10 @@
-$bg-color:#f5f5f5;
+// Nos utilitaires
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import './variable.scss';
+@import './mixin.scss';
 
-body{
-    background-color: $bg-color;
-}
+// Nos librairies
+@import './libs/nav.scss';
+
+// Animation et media queries
+@import './libs/animate.scss';

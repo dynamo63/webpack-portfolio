@@ -73,7 +73,6 @@ const config = {
 }
 
 if (isDevMode) {
-    config.devServer.open = true
     config.devServer.index = 'index.html'
 }
 
