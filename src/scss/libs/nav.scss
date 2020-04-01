@@ -1,7 +1,5 @@
 nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex($row-value:space-around);
     position: fixed;
     width: 100%;
     left: 0;
