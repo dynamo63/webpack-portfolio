@@ -1,0 +1,33 @@
+.course-item{
+    @include flex($row-value:space-between);
+}
+
+.course-number{
+    flex-basis: 15%;
+
+    span{
+        box-sizing: border-box;
+        padding: .4em .7em;
+        border-radius: 100px;
+        background-color: $color-red;
+        color: $white;
+        font-weight: 600;
+        font-size: 1.6em;
+        font-family: $normal-font;
+    }
+}
+
+.course-body{
+    font-family: "Poppins",cursive;
+    flex-basis: 80%;
+    h3{
+        margin-top: 1px;
+        margin-bottom: 2px;
+        font-weight: 300;
+        font-size: 1.9em;
+    }
+    h5{
+        margin-top: 0;
+        color: #817f7ff8;
+    }
+}
