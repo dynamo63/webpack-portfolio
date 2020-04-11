@@ -1,11 +1,19 @@
 // Nos utilitaires
-@import url('https://fonts.googleapis.com/css?family=Poppins|Oswald|Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|Oswald|Sen&display=swap');
 @import './variable.scss';
 @import './mixin.scss';
+
+// Utilities
+.heading-1{
+    font-family: "Sen",$normal-font;
+    text-align: center;
+    font-size: 2em;
+}
 
 // Nos librairies
 @import './libs/nav.scss';
 @import './libs/header.scss';
+@import './libs/aboutme.scss';
 
 // Animation et media queries
 @import './libs/animate.scss';
