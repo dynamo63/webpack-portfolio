@@ -9,6 +9,11 @@ const config = {
         filename:isDevMode ? 'assets/js/[name].js' : 'assets/js/[name].[hash].js',
         path:path.resolve(__dirname,'build'),
     },
+    resolve: {
+        alias: {
+            $css: path.resolve(__dirname, 'src/scss/'),
+        }
+    },
     module:{
         rules:[
             {
