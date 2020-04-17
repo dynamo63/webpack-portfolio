@@ -1,3 +1,7 @@
+.course-wrapper{
+    @include container();
+}
+
 .course-item{
     @include flex($row-value:space-between);
 }

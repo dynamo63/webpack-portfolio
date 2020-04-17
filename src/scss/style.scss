@@ -36,6 +36,12 @@ footer{
     }
 }
 
+#skill{
+    .progress-bars-linear{
+        @include container();
+    }
+}
+
 // Nos librairies
 @import './libs/nav.scss';
 @import './libs/header.scss';
