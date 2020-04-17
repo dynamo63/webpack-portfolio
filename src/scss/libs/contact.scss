@@ -1,0 +1,21 @@
+#contact address{
+    @include flex($colum-value:flex-start, $row-value:space-around);
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+}
+
+.contact-box{
+
+    a{
+        text-decoration: none;
+        color: $color-red;
+        font-size: 1.9em;
+        padding: .35em;
+        box-shadow: 0 0 10px $dark;
+        border-radius: 10px;
+    }
+
+    &:nth-child(3) a{
+        padding: .35em .5em;
+    }
+}

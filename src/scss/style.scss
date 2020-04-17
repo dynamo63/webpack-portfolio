@@ -8,10 +8,32 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    @include reset-space();
+}
+
 .heading-1{
     font-family: "Sen",$normal-font;
     text-align: center;
     font-size: 2em;
+}
+
+footer{
+    @include flex($row-value:space-around);
+    height: 9vh;
+    background-color: $color-red;
+
+    div{
+        color: $white;
+    }
+
+    div:first-child{
+        font-family: "Poppins",cursive;
+    }
+
+    div:last-child{
+        font-family: "Montserrat",'Times New Roman', Times, serif;
+    }
 }
 
 // Nos librairies
@@ -21,6 +43,7 @@ html{
 @import './libs/course.scss';
 @import './libs/service.scss';
 @import './libs/achievement.scss';
+@import './libs/contact.scss';
 
 // Animation et media queries
 @import './libs/animate.scss';
