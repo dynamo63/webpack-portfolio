@@ -8,11 +8,11 @@
     list-style: none;
 }
 
-@mixin flex($direction:row,$row-value:center,$colum-value:center) {
+@mixin flex($direction:row,$row-value:center,$column-value:center) {
     display: flex;
     flex-direction: $direction;
     justify-content: $row-value;
-    align-items: $colum-value;
+    align-items: $column-value;
 }
 
 @mixin container($width-value:90%) {

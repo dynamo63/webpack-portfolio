@@ -1,5 +1,5 @@
 #contact address{
-    @include flex($colum-value:flex-start, $row-value:space-around);
+    @include flex($column-value:flex-start, $row-value:space-around);
     flex-wrap: wrap;
     margin-bottom: 3em;
 }
