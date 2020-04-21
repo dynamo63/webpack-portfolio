@@ -35,3 +35,10 @@
         color: #817f7ff8;
     }
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    
+    .course-wrapper{
+        @include container(60%);
+    }
+}

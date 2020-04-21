@@ -1,4 +1,5 @@
 import './scss/style.scss'
+import { breakpointTablet } from '$css/variable.scss'
 import { activeSidebar, animateCircleBar, animatelinearBar } from './utils/func'
 import { SliderEvent } from './utils/animate'
 import { ProgressBarTag } from './components/circlebar'
@@ -9,7 +10,10 @@ btnMenu.addEventListener('click', () => {
 })
 
 const slider = new SliderEvent('.slider', '.slide-item')
-slider.init()
+
+if (document.body.clientWidth < breakpointTablet) {
+    slider.init()
+}
 
 // Ajout des balises HTML Customises
 customElements.define('progress-bar', ProgressBarTag)

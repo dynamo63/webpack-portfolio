@@ -15,7 +15,7 @@
     align-items: $colum-value;
 }
 
-@mixin container() {
-    width: 90%;
+@mixin container($width-value:90%) {
+    width: $width-value;
     margin: auto;
 }

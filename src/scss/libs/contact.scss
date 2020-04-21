@@ -19,3 +19,9 @@
         padding: .35em .5em;
     }
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    .contact-box{
+        transform: scale(1.3);
+    }
+}

@@ -37,3 +37,15 @@
         border-radius: 50%;
     }
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    .achievement-content{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .card{
+            width: 45vw;
+        }
+    }
+}

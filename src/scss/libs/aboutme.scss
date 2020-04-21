@@ -58,3 +58,12 @@
     touch-action: pan-y;
     transition: transform .5s ease-out;
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    
+    .profil{
+        display: flex;
+        justify-content: space-around;
+        @include container(99%);
+    }
+}

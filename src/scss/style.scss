@@ -36,12 +36,6 @@ footer{
     }
 }
 
-#skill{
-    .progress-bars-linear{
-        @include container();
-    }
-}
-
 // Nos librairies
 @import './libs/nav.scss';
 @import './libs/header.scss';
@@ -50,6 +44,7 @@ footer{
 @import './libs/service.scss';
 @import './libs/achievement.scss';
 @import './libs/contact.scss';
+@import './libs/skill.scss';
 
 // Animation et media queries
 @import './libs/animate.scss';

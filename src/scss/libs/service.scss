@@ -29,3 +29,16 @@
     font-family: "Poppins",cursive;
     text-align: center;
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    
+    .service-content{
+        display: flex;
+        justify-content: space-around;
+
+        .box{
+            margin: 2em;
+        }
+    }
+
+}

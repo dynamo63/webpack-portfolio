@@ -1,0 +1,15 @@
+.progress-bars-linear{
+    @include container();
+}
+
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    .progress-bars-circle{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .progress-bars-linear{
+        @include container(80%);
+    }
+}
