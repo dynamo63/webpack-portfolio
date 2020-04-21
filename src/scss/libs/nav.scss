@@ -39,10 +39,12 @@ nav{
     top: 9vh;
     bottom: 0;
     right: 0;
-    height: 90vh;
+    height: 91vh;
+    box-sizing: border-box;
     transform: translateX(100%);
     opacity: 0;
     transition: transform .5s ease-out,opacity .5s;
+    touch-action: none;
 }
 
 .nav-link{
@@ -58,7 +60,6 @@ nav{
         letter-spacing: 1px;
     }
 }
-
 
 .nav-active{
     transform: translateX(0);
