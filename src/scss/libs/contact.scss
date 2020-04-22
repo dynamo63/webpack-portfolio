@@ -25,3 +25,26 @@
         transform: scale(1.3);
     }
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px) {
+    .contact-box{
+        transition: all .3s ease-out;
+
+        a{
+            padding: .35em .5em;
+        }
+
+        a:hover{
+            background-color: $color-red;
+            color: $white;
+        }
+
+        &:hover{
+            transform: scale(1.5);
+        }
+
+        &:nth-child(3) a{
+            padding: .35em .65em;
+        }
+    }
+}

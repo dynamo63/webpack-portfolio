@@ -42,3 +42,21 @@
     }
 
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px){
+
+    .service-content{
+        @include container(80%);
+        
+        .box{
+            transition: transform .3s ease-in;
+            cursor: pointer;
+        }
+
+        .box:hover{
+            transform: translateY(-9%);
+            box-shadow: 0 0 16px $darken;
+        }
+    }
+
+}

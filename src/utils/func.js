@@ -25,6 +25,7 @@ function animateCircleBar ({ ctx, width, height, percent, fps }) {
         ctx.clearRect(0, 0, 200, 200)
         ctx.beginPath()
         ctx.strokeStyle = primaryColor
+        ctx.lineCap = 'round'
         ctx.lineWidth = '7'
         ctx.arc(width / 2, height / 2, 70, 0, (Math.PI / 180) * currentDegree)
 

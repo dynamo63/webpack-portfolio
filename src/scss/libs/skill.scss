@@ -2,7 +2,6 @@
     @include container();
 }
 
-
 @media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
     .progress-bars-circle{
         display: flex;
@@ -11,5 +10,19 @@
 
     .progress-bars-linear{
         @include container(80%);
+    }
+}
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px){
+    #skill > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        @include container(90%);
+
+        & > div{
+            flex: 1;
+        }
     }
 }

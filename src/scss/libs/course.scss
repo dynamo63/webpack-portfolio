@@ -42,3 +42,29 @@
         @include container(60%);
     }
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px){
+    .course-wrapper{
+        @include container(98%);
+        @include flex($direction:row-reverse,$row-value:space-around,$column-value:flex-start);
+    }
+
+    .course-item{
+        @include flex($direction:column,$row-value:center);
+        width: 30vw;
+        transition: transform .2s ease-in;
+
+        &:hover{
+            transform: translateY(-8%);
+            box-shadow: 0 0 7px $darken;
+        }
+    }
+
+    .course-body{
+        text-align: center;
+    }
+
+    .course-number{
+        margin-bottom: 1em;
+    }
+}

@@ -67,3 +67,9 @@
         @include container(99%);
     }
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px){
+    .profil{
+        @include container(85%);
+    }   
+}

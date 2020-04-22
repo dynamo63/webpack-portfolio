@@ -65,3 +65,36 @@ nav{
     transform: translateX(0);
     opacity: 1;
 }
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px) {
+    nav{
+        display: block;
+    }
+
+    .nav-logo,.nav-bars{
+        display: none;
+    }
+    
+    .nav-wrapper{
+        position: static;
+        width: 100%;
+        @include flex();
+        transform: translateX(0);
+        opacity: 1;
+        height: 100%;
+    }
+
+    .nav-link{
+        transform: translateX(0);
+        opacity: 1;
+
+        a{
+            margin: 0 1em;
+            padding-left: 0;
+        }
+
+        a:hover{
+            border-bottom: 2px solid $white;
+        }
+    }
+}
