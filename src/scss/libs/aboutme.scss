@@ -57,6 +57,39 @@
     transform: translateX(0);
     touch-action: pan-y;
     transition: transform .5s ease-out;
+
+    &:first-child{
+        position: relative;
+    }
+}
+
+.show-direction{
+    position: absolute;
+    background: #0000009c;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 3em;
+    color: $white;
+    opacity: 0;
+    visibility: hidden;
+
+    i{
+        margin-right: .5em;
+    }
+
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.active i{
+        animation: showDirectionAnimation .7s ease-in-out 3 alternate;
+    }
 }
 
 @media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){

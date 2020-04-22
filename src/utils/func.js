@@ -56,4 +56,42 @@ function animatelinearBar ({ progressElt, percent }) {
     progressElt.style.transform = `scaleX(${percent / 100})`
 }
 
-export { activeSidebar, animateCircleBar, animatelinearBar }
+/**
+ * Animate the target element
+ * @param {Element} target
+ * @returns {void} 
+ */
+function animate (target) {
+    switch (target.getAttribute('data-animation')) {
+    case 'default':
+        target.style.animation = '1s forwards ease-out fadeInBottom'
+        break
+    case 'circle-bar': {
+        target.style.animation = '1s forwards ease-out fadeInBottom'
+        const canvasElt = target.shadowRoot.querySelector('canvas')
+        const options = {
+            ctx: canvasElt.getContext('2d'),
+            width: canvasElt.width,
+            height: canvasElt.height,
+            percent: parseInt(target.getAttribute('progress')),
+            fps: 4
+        }
+        animateCircleBar(options)
+    }
+        break
+    case 'linear-bar': {
+        target.style.animation = '.5s forwards ease-out fadeInBottom'
+        const options = {
+            progressElt: target.shadowRoot.querySelector('.progress'),
+            percent: parseInt(target.getAttribute('progress'))
+        }
+        animatelinearBar(options)
+    }
+        break
+    default:
+        console.error('The attributes data-animation is not defined')
+        break
+    }
+}
+
+export { activeSidebar, animate }

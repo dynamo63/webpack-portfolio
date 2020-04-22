@@ -9,3 +9,29 @@
         opacity: 1;
     }
 }
+
+@keyframes fadeInBottom{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showDirectionAnimation{
+    from{
+        transform: translateX(-20px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+[data-animation]{
+    transform: translateY(10%);
+    opacity: 0;
+}
