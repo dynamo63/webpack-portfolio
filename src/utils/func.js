@@ -94,4 +94,4 @@ function animate (target) {
     }
 }
 
-export { activeSidebar, animate }
+export { activeSidebar, animate, animatelinearBar }

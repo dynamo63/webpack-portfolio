@@ -7,8 +7,8 @@
     <!-- meta for sharing link -->
     <meta property="og:title" content="Mouckeytou Moulongui" />
     <meta property="og:description" content="Hey hey!! , Je suis developpeur Web a l'ecole241, vous voulez en apprendre plus sur moi? Voici mon Portfolio !" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://smoulongui.netlify.app/" />
+    <meta property="og:image" content="https://smoulongui.netlify.app/assets/img/logo.png" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Mon eporfolio</title>
 </head>
@@ -52,10 +52,13 @@
 
             .progress{
                 height: 100%;
+                -moz-transform-origin: left;
                 -webkit-transform-origin: left;
                 transform-origin: left;
+                -moz-transform: scaleX(0);
                 transform: scaleX(0);
-                transition: transform .9s ease-in;
+                -moz-transition: all .9s ease-in;
+                transition: all .9s ease-in;
             }
 
             .name{
