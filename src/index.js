@@ -1,6 +1,6 @@
 import './scss/style.scss'
 import { breakpointTablet } from '$css/variable.scss'
-import { activeSidebar, animate } from './utils/func'
+import { activeSidebar, animate, animatelinearBar } from './utils/func'
 import { SliderEvent } from './utils/animate'
 import { ProgressBarTag } from './components/circlebar'
 
@@ -39,3 +39,14 @@ const observerData = new IntersectionObserver((elems, observer) => {
 document.querySelectorAll('[data-animation]').forEach(item => {
     observerData.observe(item)
 })
+
+if (navigator.userAgent.toLowerCase().includes('firefox')) {
+    document.querySelectorAll('progress-bar[type=linear]').forEach(item => {
+        item.removeAttribute('data-animation')
+        const options = {
+            progressElt: item.shadowRoot.querySelector('.progress'),
+            percent: parseInt(item.getAttribute('progress'))
+        }
+        animatelinearBar(options)
+    })
+}

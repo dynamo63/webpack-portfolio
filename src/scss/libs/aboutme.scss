@@ -99,6 +99,10 @@
         justify-content: space-around;
         @include container(99%);
     }
+
+    #aboutme{
+        overflow-x: initial;
+    }
 }
 
 @media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px){
