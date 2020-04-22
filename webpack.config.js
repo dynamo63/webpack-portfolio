@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const autoprefixer = require('autoprefixer')
 const isDevMode = process.env.NODE_ENV === 'development'
 
 const config = {
@@ -48,7 +49,17 @@ const config = {
             },
             {
                 test:/\.scss$/,
-                use:[MiniCssExtractPlugin.loader,'css-loader','sass-loader']
+                use:[
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    {
+                        loader:'postcss-loader',
+                        options: {
+                            plugins: () => [autoprefixer]
+                        }
+                    },
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
