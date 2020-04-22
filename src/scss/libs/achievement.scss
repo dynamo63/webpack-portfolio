@@ -1,0 +1,81 @@
+.card{
+    position: relative;
+    width: 90%;
+    margin:1em auto;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.card-front{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-1%);
+    background: linear-gradient(to bottom,#00000081,#202020be);
+    color: $white;
+    @include flex($direction:column);
+
+    p{
+        font-size: 1.3em;
+        font-family: "Poppins",monospace;
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: $white;
+        font-size: 1em;
+        border: 1px solid $white;
+        padding: 4px 10px;
+        font-family: "Poppins",cursive;
+    }
+}
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    .achievement-content{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .card{
+            width: 45vw;
+        }
+    }
+}
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px) {
+    .achievement-content .card{
+        width: 25vw;
+    }
+
+    .card{
+        overflow: hidden;
+
+        .card-front{
+            background: $color-red;
+            transform: translateY(100%) rotate(45deg);
+            opacity: 0;
+            transition: transform .4s ease-out,opacity .5s ease-in;
+        }
+
+        &:hover .card-front{
+            transform: translateY(-1%) rotate(0);
+            opacity: 1;
+        }
+    }
+
+    .card-front a{
+        background-color: $color-red;
+        
+        &:hover{
+            background-color: $white;
+            color: $color-red;
+        }
+    }
+}

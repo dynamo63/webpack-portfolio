@@ -1,0 +1,21 @@
+@mixin reset-space {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin reset-list {
+    @include reset-space();
+    list-style: none;
+}
+
+@mixin flex($direction:row,$row-value:center,$column-value:center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $row-value;
+    align-items: $column-value;
+}
+
+@mixin container($width-value:90%) {
+    width: $width-value;
+    margin: auto;
+}

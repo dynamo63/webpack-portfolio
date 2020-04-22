@@ -1,0 +1,50 @@
+#contact address{
+    @include flex($column-value:flex-start, $row-value:space-around);
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+}
+
+.contact-box{
+
+    a{
+        text-decoration: none;
+        color: $color-red;
+        font-size: 1.9em;
+        padding: .35em .45em;
+        box-shadow: 0 0 10px $dark;
+        border-radius: 10px;
+    }
+
+    &:nth-child(3) a{
+        padding: .35em .5em;
+    }
+}
+
+@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+    .contact-box{
+        transform: scale(1.3);
+    }
+}
+
+@media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px) {
+    .contact-box{
+        transition: all .3s ease-out;
+
+        a{
+            padding: .35em .5em;
+        }
+
+        a:hover{
+            background-color: $color-red;
+            color: $white;
+        }
+
+        &:hover{
+            transform: scale(1.5);
+        }
+
+        &:nth-child(3) a{
+            padding: .35em .65em;
+        }
+    }
+}
