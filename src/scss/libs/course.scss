@@ -52,11 +52,17 @@
     .course-item{
         @include flex($direction:column,$row-value:center);
         width: 30vw;
-        transition: transform .2s ease-in;
+        transition: all .3s ease-in;
+        cursor: pointer;
+        height: 300px;
 
         &:hover{
             transform: translateY(-8%);
             box-shadow: 0 0 7px $darken;
+        }
+
+        &:nth-child(2) .course-body{
+            padding: 0 1em;
         }
     }
 
