@@ -63,7 +63,8 @@ const config = {
     plugins:[
         new HtmlWebpackPlugin({
             template:'./src/index.html',
-            filename:'index.html'
+            filename:'index.html',
+            favicon:path.join(__dirname,'src','img','favicon.png')
         }),
         new MiniCssExtractPlugin({
             filename:isDevMode ? 'assets/css/[name].css' : 'assets/css/[name].[hash].css',
