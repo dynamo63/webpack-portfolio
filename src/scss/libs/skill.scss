@@ -1,15 +1,35 @@
-.progress-bars-linear{
-    @include container();
-}
+// .progress-bars-linear{
+//     @include container();
+// }
 
-@media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
-    .progress-bars-circle{
-        display: flex;
-        justify-content: space-around;
-    }
+// @media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
+//     .progress-bars-circle{
+//         display: flex;
+//         justify-content: space-around;
+//     }
 
-    .progress-bars-linear{
-        @include container(80%);
+//     .progress-bars-linear{
+//         @include container(80%);
+//     }
+// }
+
+.skill-content{
+    @include container(90%);
+    flex-wrap: wrap;
+
+    span{
+        box-sizing: border-box;
+        border: 0.9px solid $color-red;
+        padding: .35em .9em;
+        margin-right: .7em;
+        border-radius: 7px;
+        margin-bottom: 1em;
+        font-family: 'Poppins', cursive;
+
+        &.primary{
+            background-color: $color-red;
+            color: $white;
+        }
     }
 }
 
@@ -19,7 +39,7 @@
         justify-content: space-around;
         align-items: center;
         
-        @include container(90%);
+        @include container(60%);
 
         & > div{
             flex: 1;
