@@ -1,8 +1,0 @@
-{
-    "extends": "standard",
-    "rules":{
-        "indent": ["error", 4],
-        "no-undef":"off",
-        "no-trailing-spaces": ["error", { "ignoreComments": true }]
-    }
-}
