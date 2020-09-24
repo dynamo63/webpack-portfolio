@@ -1,21 +1,10 @@
-// .progress-bars-linear{
-//     @include container();
-// }
-
-// @media(min-width:map-get($map: $breakpoint, $key: tablet) * 1px){
-//     .progress-bars-circle{
-//         display: flex;
-//         justify-content: space-around;
-//     }
-
-//     .progress-bars-linear{
-//         @include container(80%);
-//     }
-// }
 
 .skill-content{
-    @include container(90%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    @include container(90%);
 
     span{
         box-sizing: border-box;
@@ -34,15 +23,12 @@
 }
 
 @media(min-width:map-get($map: $breakpoint, $key: desktop) * 1px){
-    #skill > div {
+
+    .skill-content{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
         @include container(60%);
-
-        & > div{
-            flex: 1;
-        }
     }
+
 }
